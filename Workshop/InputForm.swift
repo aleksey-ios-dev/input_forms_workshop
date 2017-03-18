@@ -8,42 +8,28 @@
 
 import Foundation
 
-protocol InputFormValidityDelegate: class {
-    
-    func inputForm(_ form: InputForm, didUpdateValidity to: Bool) -> Void
-    
-}
-
 class InputForm {
-    
-    weak var delegate: InputFormValidityDelegate?
-    
-    var inputFields = [DisplayableAsInputField]()
-    
-    var isValid = false
-    
-    func refreshValidityState() {
-        isValid = inputFields.map { $0.isValid }.reduce(true) { sum, element in sum && element }
-        delegate?.inputForm(self, didUpdateValidity: isValid)
-    }
-    
+    var inputFields = [InputField]()
+    var isValid = Observable(false)
+
     init() {
-        let firstName = InputField("")
+        let firstName = TextInputField()
         firstName.validationRule = { !$0.isEmpty }
 
-        let lastName = InputField("")
+        let lastName = TextInputField()
         lastName.validationRule = { !$0.isEmpty }
 
-        let age = InputField(0)
+        let age = IntInputField()
         age.validationRule = { $0 > 16 }
-        
+
         inputFields = [firstName, lastName, age]
-        
-        let didUpdateValidity: ((Bool) -> Void) = { [weak self] _ in
-            self?.refreshValidityState()
-        }
-        
-        inputFields.forEach { $0.didUpdateValidity = didUpdateValidity }
+        subscribeForFieldsValidity(fields: inputFields)
+    }
+
+    func subscribeForFieldsValidity(fields: [InputField]) {
+        _ = fields.map { $0.isValid }.reduce(Observable(true)) { (result, current) in
+            return result && current
+            }.subscribeNext { self.isValid.value = $0 }
     }
     
 }

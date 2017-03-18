@@ -8,33 +8,39 @@
 
 import Foundation
 
-protocol DisplayableAsInputField: class {
+
+
+class InputField {
+
+    var title = ""
+    var isValid = Observable(false)
     
-    var title: String { get set }
-    var isValid: Bool { get }
-    var didUpdateValidity: ((Bool) -> Void)? { get set }
-    
+ //   var validationRule: ((T) -> Bool) = { _ in return true }
+//    
+//    init(_ value: T) {
+//        self.value = value
+//    }
+
 }
 
-class InputField<T>: DisplayableAsInputField {
-    
-    var value: T {
-        didSet {
-            isValid = validationRule(value)
+class TextInputField: InputField {
+    let value = Observable("")
+    var validationRule: ((String) -> Bool) = { _ in return true }
+
+    init() {
+        value.subscribeNext { (nextValue) in
+            self.isValid.value = validationRule(nextValue)
         }
     }
-    var title = ""
-    var isValid = false {
-        didSet {
-            didUpdateValidity?(isValid)
+}
+
+class IntInputField: InputField {
+    let value = Observable(0)
+    var validationRule: ((Int) -> Bool) = { _ in return true }
+
+    init() {
+        value.subscribeNext { (nextValue) in
+            self.isValid.value = validationRule(nextValue)
         }
     }
-    
-    var validationRule: ((T) -> Bool) = { _ in return true }
-    var didUpdateValidity: ((Bool) -> Void)?
-    
-    init(_ value: T) {
-        self.value = value
-    }
-    
 }
