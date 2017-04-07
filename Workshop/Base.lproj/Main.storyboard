@@ -22,23 +22,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8in-cZ-uDd">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="607"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="pWH-WH-F8G"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="faH-1F-F43"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OpQ-ls-fx6">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.4161635843" blue="0.25068041749999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="dUu-bZ-gBI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="save:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XMP-u0-VFM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="8in-cZ-uDd" secondAttribute="trailing" id="9Qg-4c-ffu"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8in-cZ-uDd" secondAttribute="bottom" id="TtY-g1-r8e"/>
+                            <constraint firstItem="OpQ-ls-fx6" firstAttribute="top" secondItem="8in-cZ-uDd" secondAttribute="bottom" id="GYn-Vk-XV8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OpQ-ls-fx6" secondAttribute="bottom" id="I3G-my-cUj"/>
                             <constraint firstItem="8in-cZ-uDd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fQj-AR-bc0"/>
+                            <constraint firstItem="OpQ-ls-fx6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="g6M-fU-G1S"/>
                             <constraint firstItem="8in-cZ-uDd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rGE-dS-eZf"/>
+                            <constraint firstAttribute="trailing" secondItem="OpQ-ls-fx6" secondAttribute="trailing" id="v7j-5q-ujO"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="saveButton" destination="OpQ-ls-fx6" id="WqY-yE-2g6"/>
                         <outlet property="tableView" destination="8in-cZ-uDd" id="Y9g-Fa-5fY"/>
                     </connections>
                 </viewController>

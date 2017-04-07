@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     fileprivate var form = InputForm()
 
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var saveButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,10 @@ class ViewController: UIViewController {
         registerNibForCellClass(TextCell.self)
         registerNibForCellClass(SliderCell.self)
         registerNibForCellClass(StepperCell.self)
+    }
+    
+    @IBAction private func save(_ sender: AnyObject?) {
+        
     }
 
 }
