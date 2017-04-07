@@ -10,8 +10,8 @@ import Foundation
 
 class InputForm {
     
-    var inputFields = [InputField]()
-    var isValid = Observable(false)
+    private(set) var inputFields = [InputField]()
+    let isValid = Observable(false)
 
     init() {
         let firstName = TextInputField()
