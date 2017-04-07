@@ -19,7 +19,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J2i-Im-yOK">
-                        <rect key="frame" x="8" y="8" width="359" height="28"/>
+                        <rect key="frame" x="8" y="7" width="359" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="1RK-Gs-vtM"/>
+                        </constraints>
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
@@ -27,9 +30,8 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="J2i-Im-yOK" secondAttribute="trailing" constant="8" id="4Ug-o1-HIT"/>
-                    <constraint firstItem="J2i-Im-yOK" firstAttribute="top" secondItem="MXu-fA-qhw" secondAttribute="top" constant="8" id="DuG-W3-8uR"/>
-                    <constraint firstAttribute="bottom" secondItem="J2i-Im-yOK" secondAttribute="bottom" constant="8" id="GC5-2W-t6G"/>
                     <constraint firstItem="J2i-Im-yOK" firstAttribute="leading" secondItem="MXu-fA-qhw" secondAttribute="leading" constant="8" id="sK3-sV-xxq"/>
+                    <constraint firstItem="J2i-Im-yOK" firstAttribute="centerY" secondItem="MXu-fA-qhw" secondAttribute="centerY" id="u7t-YJ-4NH"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
