@@ -13,6 +13,8 @@
 		5B22B7F31E97E4370047917D /* TextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B22B7F21E97E4370047917D /* TextCell.xib */; };
 		5B22B7F51E97E4400047917D /* StepperCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B22B7F41E97E4400047917D /* StepperCell.xib */; };
 		5B22B7F71E97E4480047917D /* SliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B22B7F61E97E4480047917D /* SliderCell.xib */; };
+		5B22B7FD1E97F8280047917D /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B22B7FC1E97F8280047917D /* Validator.swift */; };
+		5B22B7FF1E97F8A50047917D /* Application Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B22B7FE1E97F8A50047917D /* Application Validators.swift */; };
 		5B3B35AA1E7D1E7800B61FF7 /* AutodisposePool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3B358C1E7D1E7800B61FF7 /* AutodisposePool.swift */; };
 		5B3B35AB1E7D1E7800B61FF7 /* DeinitObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3B358D1E7D1E7800B61FF7 /* DeinitObservable.swift */; };
 		5B3B35AC1E7D1E7800B61FF7 /* Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3B358E1E7D1E7800B61FF7 /* Disposable.swift */; };
@@ -58,6 +60,8 @@
 		5B22B7F21E97E4370047917D /* TextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextCell.xib; sourceTree = "<group>"; };
 		5B22B7F41E97E4400047917D /* StepperCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StepperCell.xib; sourceTree = "<group>"; };
 		5B22B7F61E97E4480047917D /* SliderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SliderCell.xib; sourceTree = "<group>"; };
+		5B22B7FC1E97F8280047917D /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		5B22B7FE1E97F8A50047917D /* Application Validators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Application Validators.swift"; sourceTree = "<group>"; };
 		5B3B358C1E7D1E7800B61FF7 /* AutodisposePool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutodisposePool.swift; sourceTree = "<group>"; };
 		5B3B358D1E7D1E7800B61FF7 /* DeinitObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeinitObservable.swift; sourceTree = "<group>"; };
 		5B3B358E1E7D1E7800B61FF7 /* Disposable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disposable.swift; sourceTree = "<group>"; };
@@ -148,6 +152,16 @@
 			path = Text;
 			sourceTree = "<group>";
 		};
+		5B22B7FB1E97F8210047917D /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				5B22B7FC1E97F8280047917D /* Validator.swift */,
+				5B22B7FE1E97F8A50047917D /* Application Validators.swift */,
+			);
+			name = Validator;
+			path = Workshop/Validator;
+			sourceTree = "<group>";
+		};
 		5B3B358B1E7D1E7800B61FF7 /* JetPack */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +208,7 @@
 		FD4D72681E740D9D00A2C9FB = {
 			isa = PBXGroup;
 			children = (
+				5B22B7FB1E97F8210047917D /* Validator */,
 				FD4D72731E740D9E00A2C9FB /* Workshop */,
 				FD4D72721E740D9E00A2C9FB /* Products */,
 			);
@@ -314,9 +329,11 @@
 				5B3B35BE1E7D1E7800B61FF7 /* UIDatePicker+Signal.swift in Sources */,
 				5B3B35B11E7D1E7800B61FF7 /* Signal+Binding.swift in Sources */,
 				5B3B35AD1E7D1E7800B61FF7 /* NSObject+DeinitObservable.swift in Sources */,
+				5B22B7FF1E97F8A50047917D /* Application Validators.swift in Sources */,
 				5B3B35AF1E7D1E7800B61FF7 /* Observable.swift in Sources */,
 				5B3B35BD1E7D1E7800B61FF7 /* UIControl+Signal.swift in Sources */,
 				FD4D728A1E740DFB00A2C9FB /* InputForm.swift in Sources */,
+				5B22B7FD1E97F8280047917D /* Validator.swift in Sources */,
 				5B3B35AB1E7D1E7800B61FF7 /* DeinitObservable.swift in Sources */,
 				FD4D728C1E740E0800A2C9FB /* User.swift in Sources */,
 				5B3B35AA1E7D1E7800B61FF7 /* AutodisposePool.swift in Sources */,
