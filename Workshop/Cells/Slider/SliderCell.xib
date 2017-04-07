@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="125" id="JVC-dg-Rt5" customClass="SliderCell" customModule="Workshop" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JVC-dg-Rt5" id="xH8-jW-yZ3">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="124.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Anf-O7-E04">
+                        <rect key="frame" x="8" y="8" width="359" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="28" id="A9M-fU-0Re"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nHr-0c-Ez8">
+                        <rect key="frame" x="6" y="47.5" width="363" height="31"/>
+                    </slider>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JpO-nX-Sns">
+                        <rect key="frame" x="8" y="85" width="359" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="28" id="iD0-82-ld0"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="JpO-nX-Sns" firstAttribute="trailing" secondItem="xH8-jW-yZ3" secondAttribute="trailingMargin" id="1tn-VM-Nda"/>
+                    <constraint firstItem="JpO-nX-Sns" firstAttribute="leading" secondItem="xH8-jW-yZ3" secondAttribute="leadingMargin" id="2aO-gv-TfX"/>
+                    <constraint firstAttribute="trailing" secondItem="nHr-0c-Ez8" secondAttribute="trailing" constant="8" id="8RP-i8-Yo7"/>
+                    <constraint firstItem="Anf-O7-E04" firstAttribute="trailing" secondItem="xH8-jW-yZ3" secondAttribute="trailingMargin" id="AHP-4y-hfT"/>
+                    <constraint firstItem="nHr-0c-Ez8" firstAttribute="centerY" secondItem="xH8-jW-yZ3" secondAttribute="centerY" id="QVS-w9-Gen"/>
+                    <constraint firstItem="Anf-O7-E04" firstAttribute="top" secondItem="xH8-jW-yZ3" secondAttribute="topMargin" id="cwB-Be-os0"/>
+                    <constraint firstItem="Anf-O7-E04" firstAttribute="leading" secondItem="xH8-jW-yZ3" secondAttribute="leadingMargin" id="eU3-EG-IiN"/>
+                    <constraint firstItem="nHr-0c-Ez8" firstAttribute="leading" secondItem="xH8-jW-yZ3" secondAttribute="leading" constant="8" id="rHW-8x-nox"/>
+                    <constraint firstItem="JpO-nX-Sns" firstAttribute="top" secondItem="nHr-0c-Ez8" secondAttribute="bottom" constant="7.5" id="shn-Ax-0Uh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="slider" destination="nHr-0c-Ez8" id="6vb-J3-HIz"/>
+                <outlet property="titleLabel" destination="Anf-O7-E04" id="PpZ-B0-NtC"/>
+                <outlet property="valueLabel" destination="JpO-nX-Sns" id="XHv-v9-caP"/>
+            </connections>
+            <point key="canvasLocation" x="-110.5" y="29.5"/>
+        </tableViewCell>
+    </objects>
+</document>

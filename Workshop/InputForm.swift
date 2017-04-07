@@ -9,6 +9,7 @@
 import Foundation
 
 class InputForm {
+    
     var inputFields = [InputField]()
     var isValid = Observable(false)
 
@@ -33,20 +34,3 @@ class InputForm {
     }
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

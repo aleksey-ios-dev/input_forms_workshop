@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B22B7EA1E97E38E0047917D /* StepperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B22B7E91E97E38E0047917D /* StepperCell.swift */; };
+		5B22B7EC1E97E3970047917D /* SliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B22B7EB1E97E3970047917D /* SliderCell.swift */; };
+		5B22B7F11E97E3B80047917D /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B22B7F01E97E3B80047917D /* TextCell.swift */; };
+		5B22B7F31E97E4370047917D /* TextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B22B7F21E97E4370047917D /* TextCell.xib */; };
+		5B22B7F51E97E4400047917D /* StepperCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B22B7F41E97E4400047917D /* StepperCell.xib */; };
+		5B22B7F71E97E4480047917D /* SliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B22B7F61E97E4480047917D /* SliderCell.xib */; };
 		5B3B35AA1E7D1E7800B61FF7 /* AutodisposePool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3B358C1E7D1E7800B61FF7 /* AutodisposePool.swift */; };
 		5B3B35AB1E7D1E7800B61FF7 /* DeinitObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3B358D1E7D1E7800B61FF7 /* DeinitObservable.swift */; };
 		5B3B35AC1E7D1E7800B61FF7 /* Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3B358E1E7D1E7800B61FF7 /* Disposable.swift */; };
@@ -46,6 +52,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B22B7E91E97E38E0047917D /* StepperCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepperCell.swift; sourceTree = "<group>"; };
+		5B22B7EB1E97E3970047917D /* SliderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderCell.swift; sourceTree = "<group>"; };
+		5B22B7F01E97E3B80047917D /* TextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
+		5B22B7F21E97E4370047917D /* TextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextCell.xib; sourceTree = "<group>"; };
+		5B22B7F41E97E4400047917D /* StepperCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StepperCell.xib; sourceTree = "<group>"; };
+		5B22B7F61E97E4480047917D /* SliderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SliderCell.xib; sourceTree = "<group>"; };
 		5B3B358C1E7D1E7800B61FF7 /* AutodisposePool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutodisposePool.swift; sourceTree = "<group>"; };
 		5B3B358D1E7D1E7800B61FF7 /* DeinitObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeinitObservable.swift; sourceTree = "<group>"; };
 		5B3B358E1E7D1E7800B61FF7 /* Disposable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disposable.swift; sourceTree = "<group>"; };
@@ -99,6 +111,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B22B7E51E97E2FA0047917D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5B22B7EF1E97E3B80047917D /* Text */,
+				5B22B7E81E97E32B0047917D /* Stepper */,
+				5B22B7E71E97E3210047917D /* Slider */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		5B22B7E71E97E3210047917D /* Slider */ = {
+			isa = PBXGroup;
+			children = (
+				5B22B7EB1E97E3970047917D /* SliderCell.swift */,
+				5B22B7F61E97E4480047917D /* SliderCell.xib */,
+			);
+			path = Slider;
+			sourceTree = "<group>";
+		};
+		5B22B7E81E97E32B0047917D /* Stepper */ = {
+			isa = PBXGroup;
+			children = (
+				5B22B7E91E97E38E0047917D /* StepperCell.swift */,
+				5B22B7F41E97E4400047917D /* StepperCell.xib */,
+			);
+			path = Stepper;
+			sourceTree = "<group>";
+		};
+		5B22B7EF1E97E3B80047917D /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				5B22B7F01E97E3B80047917D /* TextCell.swift */,
+				5B22B7F21E97E4370047917D /* TextCell.xib */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
 		5B3B358B1E7D1E7800B61FF7 /* JetPack */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +210,7 @@
 		FD4D72731E740D9E00A2C9FB /* Workshop */ = {
 			isa = PBXGroup;
 			children = (
+				5B22B7E51E97E2FA0047917D /* Cells */,
 				5B3B358B1E7D1E7800B61FF7 /* JetPack */,
 				FD4D72741E740D9E00A2C9FB /* AppDelegate.swift */,
 				FD4D72891E740DFB00A2C9FB /* InputForm.swift */,
@@ -237,7 +287,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD4D72821E740D9E00A2C9FB /* LaunchScreen.storyboard in Resources */,
+				5B22B7F71E97E4480047917D /* SliderCell.xib in Resources */,
 				FD4D727F1E740D9E00A2C9FB /* Assets.xcassets in Resources */,
+				5B22B7F31E97E4370047917D /* TextCell.xib in Resources */,
+				5B22B7F51E97E4400047917D /* StepperCell.xib in Resources */,
 				FD4D727A1E740D9E00A2C9FB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD4D727D1E740D9E00A2C9FB /* Workshop.xcdatamodeld in Sources */,
+				5B22B7EC1E97E3970047917D /* SliderCell.swift in Sources */,
 				5B3B35B31E7D1E7800B61FF7 /* Signal+Comparable.swift in Sources */,
 				5B3B35BC1E7D1E7800B61FF7 /* UIButton+Signal.swift in Sources */,
 				5B3B35C31E7D1E7800B61FF7 /* UITextField+Signal.swift in Sources */,
@@ -266,6 +320,8 @@
 				5B3B35AB1E7D1E7800B61FF7 /* DeinitObservable.swift in Sources */,
 				FD4D728C1E740E0800A2C9FB /* User.swift in Sources */,
 				5B3B35AA1E7D1E7800B61FF7 /* AutodisposePool.swift in Sources */,
+				5B22B7EA1E97E38E0047917D /* StepperCell.swift in Sources */,
+				5B22B7F11E97E3B80047917D /* TextCell.swift in Sources */,
 				5B3B35C51E7D1E7800B61FF7 /* UIView+Signal.swift in Sources */,
 				5B3B35BB1E7D1E7800B61FF7 /* ControlProxy.m in Sources */,
 				5B3B35B01E7D1E7800B61FF7 /* Pipe.swift in Sources */,
