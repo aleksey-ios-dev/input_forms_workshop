@@ -13,5 +13,6 @@ class User {
     var firstName = ""
     var lastName = ""
     var age = 0
+    var numberOfKids = 0
     
 }
