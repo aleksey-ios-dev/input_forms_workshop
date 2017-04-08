@@ -18,7 +18,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.rowHeight = 100.0
+        tableView.rowHeight = 90.0
+        tableView.tableFooterView = UIView()
         
         let registerNibForCellClass: (UITableViewCell.Type) -> Void = {
             self.tableView.register(UINib(nibName: String(describing: $0), bundle: nil),
