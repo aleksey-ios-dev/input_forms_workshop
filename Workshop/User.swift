@@ -8,15 +8,15 @@
 
 import Foundation
 
-class User {
+class User: CustomDebugStringConvertible {
     
     var firstName = ""
     var lastName = ""
     var age = 0
     var numberOfKids = 0
     
-    var description: String {
-        var result = "\(firstName) \(lastName)"
+    var debugDescription: String {
+        var result = "\(firstName) \(lastName)\n"
         result.append("Age: \(age)\n")
         result.append("Kids: \(numberOfKids)\n")
         
