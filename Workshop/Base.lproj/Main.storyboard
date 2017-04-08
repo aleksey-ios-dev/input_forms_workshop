@@ -30,7 +30,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OpQ-ls-fx6">
-                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <rect key="frame" x="187.5" y="607" width="187.5" height="60"/>
                                 <color key="backgroundColor" red="0.82745098039999998" green="0.82745098039999998" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="dUu-bZ-gBI"/>
@@ -43,14 +43,32 @@
                                     <action selector="save:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XMP-u0-VFM"/>
                                 </connections>
                             </button>
+                            <button contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92m-Bb-NUC">
+                                <rect key="frame" x="0.0" y="607" width="187.5" height="60"/>
+                                <color key="backgroundColor" red="0.51896342949999996" green="0.58287575889999999" blue="0.71426005589999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Ups-RG-kBt"/>
+                                </constraints>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled" backgroundImage="save_button_disabled"/>
+                                <connections>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OnU-q0-N1h"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="OpQ-ls-fx6" firstAttribute="leading" secondItem="92m-Bb-NUC" secondAttribute="trailing" id="2ts-n2-Lpg"/>
+                            <constraint firstItem="92m-Bb-NUC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7Bt-QR-TSW"/>
                             <constraint firstAttribute="trailing" secondItem="8in-cZ-uDd" secondAttribute="trailing" id="9Qg-4c-ffu"/>
+                            <constraint firstItem="92m-Bb-NUC" firstAttribute="top" secondItem="8in-cZ-uDd" secondAttribute="bottom" id="BES-I7-j92"/>
                             <constraint firstItem="OpQ-ls-fx6" firstAttribute="top" secondItem="8in-cZ-uDd" secondAttribute="bottom" id="GYn-Vk-XV8"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OpQ-ls-fx6" secondAttribute="bottom" id="I3G-my-cUj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="92m-Bb-NUC" secondAttribute="bottom" id="aeG-2X-zW9"/>
                             <constraint firstItem="8in-cZ-uDd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fQj-AR-bc0"/>
-                            <constraint firstItem="OpQ-ls-fx6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="g6M-fU-G1S"/>
+                            <constraint firstItem="92m-Bb-NUC" firstAttribute="width" secondItem="OpQ-ls-fx6" secondAttribute="width" id="gcD-O4-Yqv"/>
                             <constraint firstItem="8in-cZ-uDd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="rGE-dS-eZf"/>
                             <constraint firstAttribute="trailing" secondItem="OpQ-ls-fx6" secondAttribute="trailing" id="v7j-5q-ujO"/>
                         </constraints>

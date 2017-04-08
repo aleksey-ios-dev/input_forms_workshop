@@ -34,6 +34,10 @@ class ViewController: UIViewController {
     @IBAction private func save(_ sender: AnyObject?) {
         
     }
+    
+    @IBAction private func reset(_ sender: AnyObject?) {
+        
+    }
 
 }
 
