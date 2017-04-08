@@ -15,11 +15,11 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JVC-dg-Rt5" id="xH8-jW-yZ3">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nHr-0c-Ez8">
-                        <rect key="frame" x="100" y="37.5" width="257" height="31"/>
+                        <rect key="frame" x="98" y="37.5" width="259" height="31"/>
                     </slider>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JpO-nX-Sns">
                         <rect key="frame" x="20" y="43.5" width="70" height="18"/>
@@ -40,7 +40,7 @@
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="Anf-O7-E04" secondAttribute="trailing" constant="20" id="6Hl-1D-0GM"/>
                     <constraint firstItem="JpO-nX-Sns" firstAttribute="leading" secondItem="xH8-jW-yZ3" secondAttribute="leading" constant="20" id="AzU-zv-GDN"/>
-                    <constraint firstItem="nHr-0c-Ez8" firstAttribute="leading" secondItem="JpO-nX-Sns" secondAttribute="trailing" constant="12" id="FOt-1o-2BK"/>
+                    <constraint firstItem="nHr-0c-Ez8" firstAttribute="leading" secondItem="JpO-nX-Sns" secondAttribute="trailing" constant="10" id="FOt-1o-2BK"/>
                     <constraint firstItem="Anf-O7-E04" firstAttribute="leading" secondItem="xH8-jW-yZ3" secondAttribute="leading" constant="20" id="Knp-GU-Yh9"/>
                     <constraint firstAttribute="bottom" secondItem="nHr-0c-Ez8" secondAttribute="bottom" constant="22" id="N9t-RW-je3"/>
                     <constraint firstItem="Anf-O7-E04" firstAttribute="top" secondItem="xH8-jW-yZ3" secondAttribute="top" constant="12" id="Ycs-wF-AYS"/>

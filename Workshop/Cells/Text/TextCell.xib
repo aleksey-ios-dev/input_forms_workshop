@@ -15,13 +15,13 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dv4-c1-Iqb" id="MXu-fA-qhw">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J2i-Im-yOK">
-                        <rect key="frame" x="20" y="39.5" width="335" height="30"/>
+                        <rect key="frame" x="20" y="37.5" width="335" height="32"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="30" id="1RK-Gs-vtM"/>
+                            <constraint firstAttribute="height" constant="32" id="1RK-Gs-vtM"/>
                         </constraints>
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
