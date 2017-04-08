@@ -11,5 +11,6 @@ import UIKit
 class TextCell: UITableViewCell {
     
     @IBOutlet private weak var textField: UITextField!
+    @IBOutlet private weak var titleLabel: UILabel!
     
 }
