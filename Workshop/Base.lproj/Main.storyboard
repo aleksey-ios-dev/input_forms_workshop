@@ -49,10 +49,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Ups-RG-kBt"/>
                                 </constraints>
-                                <state key="normal" title="Reset">
+                                <state key="normal" title="Reset" backgroundImage="reset_button_enabled">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="disabled" backgroundImage="save_button_disabled"/>
+                                <state key="disabled" backgroundImage="reset_button_disabled"/>
                                 <connections>
                                     <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OnU-q0-N1h"/>
                                 </connections>
@@ -74,6 +74,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="resetButton" destination="92m-Bb-NUC" id="ZSN-GR-eoV"/>
                         <outlet property="saveButton" destination="OpQ-ls-fx6" id="WqY-yE-2g6"/>
                         <outlet property="tableView" destination="8in-cZ-uDd" id="Y9g-Fa-5fY"/>
                     </connections>
@@ -84,6 +85,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="reset_button_disabled" width="50" height="50"/>
+        <image name="reset_button_enabled" width="50" height="50"/>
         <image name="save_button_disabled" width="50" height="50"/>
         <image name="save_button_enabled" width="50" height="50"/>
     </resources>

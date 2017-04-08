@@ -14,6 +14,7 @@ class ViewController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var saveButton: UIButton!
+    @IBOutlet private weak var resetButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
