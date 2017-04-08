@@ -42,6 +42,8 @@
 		5B3B35C31E7D1E7800B61FF7 /* UITextField+Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3B35A71E7D1E7800B61FF7 /* UITextField+Signal.swift */; };
 		5B3B35C41E7D1E7800B61FF7 /* USegmentedControl+Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3B35A81E7D1E7800B61FF7 /* USegmentedControl+Signal.swift */; };
 		5B3B35C51E7D1E7800B61FF7 /* UIView+Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3B35A91E7D1E7800B61FF7 /* UIView+Signal.swift */; };
+		B8DD663A1E98DE6E001F6034 /* InputFieldDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DD66391E98DE6E001F6034 /* InputFieldDisplaying.swift */; };
+		B8DD663C1E98FBCC001F6034 /* InputFormBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DD663B1E98FBCC001F6034 /* InputFormBuilder.swift */; };
 		FD4D72751E740D9E00A2C9FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4D72741E740D9E00A2C9FB /* AppDelegate.swift */; };
 		FD4D72771E740D9E00A2C9FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4D72761E740D9E00A2C9FB /* ViewController.swift */; };
 		FD4D727A1E740D9E00A2C9FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD4D72781E740D9E00A2C9FB /* Main.storyboard */; };
@@ -91,6 +93,8 @@
 		5B3B35A81E7D1E7800B61FF7 /* USegmentedControl+Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "USegmentedControl+Signal.swift"; sourceTree = "<group>"; };
 		5B3B35A91E7D1E7800B61FF7 /* UIView+Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Signal.swift"; sourceTree = "<group>"; };
 		5B3B35C61E7D1E9E00B61FF7 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		B8DD66391E98DE6E001F6034 /* InputFieldDisplaying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFieldDisplaying.swift; sourceTree = "<group>"; };
+		B8DD663B1E98FBCC001F6034 /* InputFormBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFormBuilder.swift; sourceTree = "<group>"; };
 		FD4D72711E740D9E00A2C9FB /* Workshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Workshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD4D72741E740D9E00A2C9FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD4D72761E740D9E00A2C9FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 				5B22B7EF1E97E3B80047917D /* Text */,
 				5B22B7E81E97E32B0047917D /* Stepper */,
 				5B22B7E71E97E3210047917D /* Slider */,
+				B8DD66391E98DE6E001F6034 /* InputFieldDisplaying.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -225,19 +230,20 @@
 		FD4D72731E740D9E00A2C9FB /* Workshop */ = {
 			isa = PBXGroup;
 			children = (
-				5B22B7E51E97E2FA0047917D /* Cells */,
-				5B3B358B1E7D1E7800B61FF7 /* JetPack */,
 				FD4D72741E740D9E00A2C9FB /* AppDelegate.swift */,
-				FD4D72891E740DFB00A2C9FB /* InputForm.swift */,
+				FD4D727E1E740D9E00A2C9FB /* Assets.xcassets */,
+				5B3B35C61E7D1E9E00B61FF7 /* BridgingHeader.h */,
+				5B22B7E51E97E2FA0047917D /* Cells */,
+				FD4D72831E740D9E00A2C9FB /* Info.plist */,
 				FD4D728D1E7412B900A2C9FB /* InputField.swift */,
+				FD4D72891E740DFB00A2C9FB /* InputForm.swift */,
+				B8DD663B1E98FBCC001F6034 /* InputFormBuilder.swift */,
+				5B3B358B1E7D1E7800B61FF7 /* JetPack */,
+				FD4D72801E740D9E00A2C9FB /* LaunchScreen.storyboard */,
+				FD4D72781E740D9E00A2C9FB /* Main.storyboard */,
 				FD4D728B1E740E0800A2C9FB /* User.swift */,
 				FD4D72761E740D9E00A2C9FB /* ViewController.swift */,
-				FD4D72781E740D9E00A2C9FB /* Main.storyboard */,
-				FD4D727E1E740D9E00A2C9FB /* Assets.xcassets */,
-				FD4D72801E740D9E00A2C9FB /* LaunchScreen.storyboard */,
-				FD4D72831E740D9E00A2C9FB /* Info.plist */,
 				FD4D727B1E740D9E00A2C9FB /* Workshop.xcdatamodeld */,
-				5B3B35C61E7D1E9E00B61FF7 /* BridgingHeader.h */,
 			);
 			path = Workshop;
 			sourceTree = "<group>";
@@ -333,6 +339,7 @@
 				5B3B35AF1E7D1E7800B61FF7 /* Observable.swift in Sources */,
 				5B3B35BD1E7D1E7800B61FF7 /* UIControl+Signal.swift in Sources */,
 				FD4D728A1E740DFB00A2C9FB /* InputForm.swift in Sources */,
+				B8DD663A1E98DE6E001F6034 /* InputFieldDisplaying.swift in Sources */,
 				5B22B7FD1E97F8280047917D /* Validator.swift in Sources */,
 				5B3B35AB1E7D1E7800B61FF7 /* DeinitObservable.swift in Sources */,
 				FD4D728C1E740E0800A2C9FB /* User.swift in Sources */,
@@ -344,6 +351,7 @@
 				5B3B35B01E7D1E7800B61FF7 /* Pipe.swift in Sources */,
 				5B3B35C41E7D1E7800B61FF7 /* USegmentedControl+Signal.swift in Sources */,
 				5B3B35B61E7D1E7800B61FF7 /* Signal+KVO.swift in Sources */,
+				B8DD663C1E98FBCC001F6034 /* InputFormBuilder.swift in Sources */,
 				FD4D72751E740D9E00A2C9FB /* AppDelegate.swift in Sources */,
 				5B3B35AE1E7D1E7800B61FF7 /* NSObject+Pool.swift in Sources */,
 				5B3B35B51E7D1E7800B61FF7 /* Signal+Equatable.swift in Sources */,

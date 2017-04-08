@@ -8,29 +8,39 @@
 
 import Foundation
 
+typealias ChangesApplier = (User) -> Void
+
 class InputForm {
     
     private(set) var inputFields = [InputField]()
-    let isValid = Observable(false)
-
-    init() {
-        let firstName = TextInputField()
-        firstName.validationRule = { !$0.isEmpty }
-
-        let lastName = TextInputField()
-        lastName.validationRule = { !$0.isEmpty }
-
-        let age = IntInputField()
-        age.validationRule = { $0 > 16 }
-
-        inputFields = [firstName, lastName, age]
-        subscribeForFieldsValidity(fields: inputFields)
+    private(set) var isValid: Observable<Bool>!
+    private(set) var hasChanges = Observable(false)
+    private var defaultsAppliers = [ChangesApplier]()
+    private var changesAppliers = [ChangesApplier]()
+    
+    func fill(_ user: User) {
+        changesAppliers.forEach { $0(user) }
     }
-
-    func subscribeForFieldsValidity(fields: [InputField]) {
-        _ = fields.map { $0.isValid }.reduce(Observable(true)) { (result, current) in
-            return result && current
-            }.subscribeNext { self.isValid.value = $0 }
+    
+    func prefill(with user: User) {
+        defaultsAppliers.forEach { $0(user) }
+    }
+    
+    func startNotifyingAboutChanges() {
+        Signals.merge(inputFields.map { $0.didChange }).map { true }.bind(to: hasChanges)
+    }
+    
+    func accept(_ builder: InputFormBuilder) {
+        let contents = builder.createContents()
+        inputFields = contents.fields
+        defaultsAppliers = contents.defaultsAppliers
+        changesAppliers = contents.changesAppliers
+        
+        let resetChanges: ChangesApplier = { [weak self] _ in self?.hasChanges.value = false }
+        changesAppliers.append(resetChanges)
+        defaultsAppliers.append(resetChanges)
+        
+        isValid = inputFields.map { $0.isValid }.reduce(Observable(true), &&).observable()
     }
     
 }

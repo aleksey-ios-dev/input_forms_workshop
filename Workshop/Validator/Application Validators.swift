@@ -10,4 +10,8 @@ import Foundation
 
 struct Validators {
     
+    static let name = !shorterThan(3) && !longerThan(20)
+    static let age = greaterThan(18)
+    
+    
 }

@@ -10,7 +10,26 @@ import UIKit
 
 class TextCell: UITableViewCell {
     
-    @IBOutlet private weak var textField: UITextField!
-    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet fileprivate weak var textField: UITextField!
+    @IBOutlet fileprivate weak var titleLabel: UILabel!
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        pool.drain()
+    }
+    
+}
+
+extension TextCell: InputFieldDisplaying {
+    
+    func connect(to field: InputField) {
+        guard let field = field as? TextInputField else { return }
+        
+        titleLabel.text = field.title
+        textField.text = field.value.value
+        textField.textSignal.subscribeNext { field.applyValue($0) }.putInto(pool)
+        field.value.bind(toKeyPath: #keyPath(UITextField.text), of: textField).putInto(pool)
+    }
     
 }

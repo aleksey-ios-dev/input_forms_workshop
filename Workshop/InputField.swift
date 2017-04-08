@@ -9,34 +9,51 @@
 import Foundation
 
 
-
 class InputField {
 
     var title = ""
-    var isValid = Observable(false)
+    var isValid = Observable(true)
+    var didChange: Pipe<Void>!
     
 }
 
 class TextInputField: InputField {
+    
     let value = Observable("")
-    var validationRule: ((String) -> Bool) = { _ in return true }
+    var validator = Validator<String> { _ in true }
 
     override init() {
         super.init()
-        value.subscribeNext { (nextValue) in
-            self.isValid.value = self.validationRule(nextValue)
-        }
+        
+        isValid = value.map { self.validator.check($0) }.observable()
+        didChange = value.void()
+    }
+    
+    func applyValue(_ value: String) {
+        self.value.value = value
     }
 }
 
 class IntInputField: InputField {
+    
+    enum Style {
+        case stepper, slider
+    }
+    
     let value = Observable(0)
-    var validationRule: ((Int) -> Bool) = { _ in return true }
-
+    var validator = Validator<Int> { _ in true }
+    var minimum = 0
+    var maximum = 100
+    var preferredStyle: Style = .slider
+    
     override init() {
         super.init()
-        value.subscribeNext { (nextValue) in
-            self.isValid.value = self.validationRule(nextValue)
-        }
+        
+        isValid = value.map { self.validator.check($0) }.observable()
+        didChange = value.void()
+    }
+    
+    func applyValue(_ value: Int) {
+        self.value.value = value
     }
 }
