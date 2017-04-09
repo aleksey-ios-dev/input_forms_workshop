@@ -26,7 +26,7 @@ class TextInputField: InputField {
         super.init()
         
         isValid = value.map { self.validator.check($0) }.observable()
-        didChange = value.void()
+        didChange = value.skipRepeating().void()
     }
     
     func applyValue(_ value: String) {
@@ -50,7 +50,7 @@ class IntInputField: InputField {
         super.init()
         
         isValid = value.map { self.validator.check($0) }.observable()
-        didChange = value.void()
+        didChange = value.skipRepeating().void()
     }
     
     func applyValue(_ value: Int) {
